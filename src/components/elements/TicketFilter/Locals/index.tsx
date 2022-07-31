@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Image from "next/image";
 import { LocalCheckboxLabel } from "./styles";
-import Icons from "./icons/index";
+import { constants } from "../../../../constants/ticketList";
 
 export function Locals() {
   return (
@@ -9,9 +8,9 @@ export function Locals() {
       <p className="title">Tipo de propriedades</p>
 
       <div>
-        <LocalCheckbox label="Casa (346)" icon={<Icons.Apto />} />
-        <LocalCheckbox label="Apartamento (234)" icon={<Icons.Apto />} />
-        <LocalCheckbox label="Hotel (23)" icon={<Icons.Hotel />} />
+        {constants.filters.locals.map(({ label, icon: Icon }, index) => (
+          <LocalCheckbox label={label} icon={<Icon />} key={index} />
+        ))}
       </div>
     </div>
   );

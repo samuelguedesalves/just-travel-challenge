@@ -1,6 +1,6 @@
 import { styled } from "../../../../styles/stitches.config";
 
-export const PriceOption = styled("button", {
+export const PriceOptionContainer = styled("label", {
   height: 34,
   paddingInline: 6,
   fontSize: "$paragraph3",
@@ -9,9 +9,15 @@ export const PriceOption = styled("button", {
   borderRadius: 2,
 
   width: "fit-content",
-  display: "inline-block",
+  display: "inline-flex",
+  justifyContent: "center",
+  alignItems: "center",
   marginBottom: 6,
   marginRight: 6,
+
+  "& input": {
+    display: "none",
+  },
 
   variants: {
     type: {

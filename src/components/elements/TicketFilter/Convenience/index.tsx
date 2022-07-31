@@ -1,4 +1,5 @@
 import React from "react";
+import { constants } from "../../../../constants/ticketList";
 import { Checkbox } from "../../Checkbox";
 import { ConvenienceContainer } from "./styles";
 
@@ -8,11 +9,9 @@ export function Convenience() {
       <p className="title">Comodidade</p>
 
       <div>
-        <Checkbox label="Wi-Fi" />
-        <Checkbox label="Cozinha" />
-        <Checkbox label="Maquina de lavar" />
-        <Checkbox label="Ar-condicionado" />
-        <Checkbox label="Secadora" />
+        {constants.filters.conveniences.map((convenience, index) => (
+          <Checkbox label={convenience} key={index} />
+        ))}
       </div>
     </ConvenienceContainer>
   );

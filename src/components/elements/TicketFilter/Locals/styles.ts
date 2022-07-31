@@ -34,7 +34,7 @@ export const LocalCheckboxLabel = styled("label", {
         border: "$blue solid 2px",
         color: "$blue",
         
-        "& svg": {
+        "& svg *": {
           stroke: "$blue",
         }
       },
@@ -42,7 +42,7 @@ export const LocalCheckboxLabel = styled("label", {
         border: "$gray30 solid 2px",
         color: "$gray30",
         
-        "& svg": {
+        "& svg *": {
           stroke: "$gray30",
         }
       },
