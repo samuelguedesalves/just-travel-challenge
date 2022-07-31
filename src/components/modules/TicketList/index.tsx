@@ -35,7 +35,7 @@ export function TicketList() {
               local="GetYourGuide Tours & Tickets GmbH"
               totalPrice={235128}
               sellingPrice={139128}
-              imageUrl="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/12/Yas-Waterworld-1.jpg"
+              imageUrl="https://loremflickr.com/cache/resized/5652_30294779656_d31e4b5db2_b_640_480_nofilter.jpg"
             />
             <TicketCard
               className="ticket-card"
@@ -43,7 +43,7 @@ export function TicketList() {
               local="GetYourGuide Tours & Tickets GmbH"
               totalPrice={235128}
               sellingPrice={139128}
-              imageUrl="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/12/Yas-Waterworld-1.jpg"
+              imageUrl="https://loremflickr.com/cache/resized/5652_30294779656_d31e4b5db2_b_640_480_nofilter.jpg"
             />
             <TicketCard
               className="ticket-card"
@@ -51,7 +51,7 @@ export function TicketList() {
               local="GetYourGuide Tours & Tickets GmbH"
               totalPrice={235128}
               sellingPrice={139128}
-              imageUrl="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/12/Yas-Waterworld-1.jpg"
+              imageUrl="https://loremflickr.com/cache/resized/5652_30294779656_d31e4b5db2_b_640_480_nofilter.jpg"
             />
             <TicketCard
               className="ticket-card"
@@ -59,7 +59,7 @@ export function TicketList() {
               local="GetYourGuide Tours & Tickets GmbH"
               totalPrice={235128}
               sellingPrice={139128}
-              imageUrl="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/12/Yas-Waterworld-1.jpg"
+              imageUrl="https://loremflickr.com/cache/resized/5652_30294779656_d31e4b5db2_b_640_480_nofilter.jpg"
             />
             <TicketCard
               className="ticket-card"
@@ -67,7 +67,7 @@ export function TicketList() {
               local="GetYourGuide Tours & Tickets GmbH"
               totalPrice={235128}
               sellingPrice={139128}
-              imageUrl="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/12/Yas-Waterworld-1.jpg"
+              imageUrl="https://loremflickr.com/cache/resized/5652_30294779656_d31e4b5db2_b_640_480_nofilter.jpg"
             />
           </div>
         </div>
