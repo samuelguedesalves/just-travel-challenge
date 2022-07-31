@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Header } from "../components/modules/Header";
+import { Suggestions } from "../components/modules/Suggestions";
 import { TicketList } from "../components/modules/TicketList";
 
 const Home: NextPage = () => {
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
 
       <Header />
       <TicketList />
+      <Suggestions />
     </div>
   );
 };
