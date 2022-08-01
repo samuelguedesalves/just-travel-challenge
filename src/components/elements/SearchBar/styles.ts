@@ -67,11 +67,14 @@ export const DateInputContainer = styled("div", {
 export const DatePicker = styled(AntDatePicker, {
   height: 48,
   fontFamily: "$circularStd",
-  paddingInlineStart: 48,
   borderColor: "$gray20",
   borderRadius: 0,
   borderLeft: "none",
   marginLeft: 2,
+  
+  "&.ant-picker": {
+    paddingLeft: 48,
+  },
 
   "&:hover": {
     borderColor: "$blue",
