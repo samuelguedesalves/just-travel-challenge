@@ -85,4 +85,50 @@ export const MainSection = styled("main", {
       marginBottom: 0,
     }
   },
-})
+
+  ".content .ticket-listage .pagination-container": {
+    display: "flex",
+    flexDirection: "row-reverse",
+    alignItems: "center",
+    
+    "& .total-result": {
+      display: "block",
+      fontFamily: "$circularStd",
+      fontSize: "$paragraph2",
+      color: "$gray60",
+      marginRight: 10,
+    }
+  },
+
+  ".content .ticket-listage .pagination-container .ant-pagination": {
+    "& .ant-pagination-prev button": {
+      background: "none",
+      border: "none",
+    },
+    
+    "& .ant-pagination-next button": {
+      background: "none",
+      border: "none",
+    },
+  },
+
+  ".content .ticket-listage .pagination-container .ant-pagination .ant-pagination-item": {
+    background: "none",
+    border: "none",
+    paddingBlock: 3,
+    
+    "&.ant-pagination-item-active a": {
+      color: "$blue",
+      border: "none",
+    }
+  },
+
+  ".content .ticket-listage .pagination-container .ant-select-selector": {
+    background: "$white",
+    borderRadius: 4,
+
+    "&:hover": {
+      border: "2px solid $blue",
+    },
+  }
+});

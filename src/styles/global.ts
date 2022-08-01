@@ -4,19 +4,19 @@ export const globalStyles = globalCss({
   "@font-face": [
     {
       fontFamily: "CircularStd",
-      src: "url('fonts/CircularStd-Book.ttf')",
+      src: "url('/fonts/CircularStd-Book.ttf')",
       fontStyle: "normal",
       fontWeight: "500",
     },
     {
       fontFamily: "CircularStd",
-      src: "url('fonts/CircularStd-Medium.ttf')",
+      src: "url('/fonts/CircularStd-Medium.ttf')",
       fontStyle: "normal",
       fontWeight: "600",
     },
     {
       fontFamily: "CircularStd",
-      src: "url('fonts/CircularStd-Bold.ttf')",
+      src: "url('/fonts/CircularStd-Bold.ttf')",
       fontStyle: "normal",
       fontWeight: "700",
     },
@@ -76,4 +76,4 @@ export const globalStyles = globalCss({
   ".ant-picker-dropdown": {
     fontFamily: "$circularStd",
   }
-})
+});
