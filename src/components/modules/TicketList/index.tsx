@@ -2,20 +2,24 @@ import React, { useState } from "react";
 import { Pagination, Select } from "antd";
 import { FiGrid, FiMenu } from "react-icons/fi";
 
-import { useAppSelector } from "../../../services/redux/hooks";
+import { useAppDispatch, useAppSelector } from "../../../services/redux/hooks";
 
 import { SearchBar } from "../../elements/SearchBar";
 import { TicketCard } from "../../elements/TicketCard";
 import { TicketFilter } from "../../elements/TicketFilter";
 
 import { MainSection, SearchSection, ViewModeButton } from "./styles";
+import { useRouter } from "next/router";
+import { setTicket, Ticket } from "../../../services/redux/ticketSlice";
 
 const { Option } = Select;
 
 export function TicketList() {
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState<number>(1);
 
   const tickets = useAppSelector((state) => state.tickets);
+  const dispatch = useAppDispatch();
 
   function handlePageChange(page: number) {
     setCurrentPage(page);
@@ -28,6 +32,11 @@ export function TicketList() {
       (currentPage - 1) * pageSize,
       currentPage * pageSize
     );
+  }
+
+  function goToTicket(ticket: Ticket) {
+    dispatch(setTicket(ticket));
+    router.push(`/ticket/${ticket.id}`);
   }
 
   return (
@@ -65,6 +74,7 @@ export function TicketList() {
                   totalPrice={235128}
                   sellingPrice={price}
                   imageUrl={ticket.images}
+                  onClick={() => goToTicket(ticket)}
                 />
               );
             })}

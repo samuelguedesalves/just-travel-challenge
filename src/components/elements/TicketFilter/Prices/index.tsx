@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { constants } from "../../../../constants/ticketList";
-import { formatAmount } from "../../../../utils/formatAmount";
+import { parseAmount } from "../../../../utils/parseAmount";
 import { PriceOptionContainer } from "./styles";
 
 export function Price() {
@@ -34,7 +34,7 @@ function PriceOption({ price }: PriceOptionProps) {
   return (
     <PriceOptionContainer type={checked ? "active" : "unactive"}>
       <input type="checkbox" onChange={handleInputChange} />
-      {`${formatAmount(price.min / 100)} - ${formatAmount(price.max / 100)}`}
+      {`${parseAmount(price.min / 100)} - ${parseAmount(price.max / 100)}`}
     </PriceOptionContainer>
   );
 }

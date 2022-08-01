@@ -1,5 +1,4 @@
 import { DatePicker as AntDatePicker } from "antd";
-import { FiMapPin } from "react-icons/fi";
 import { styled } from "../../../styles/stitches.config";
 
 export const Container = styled("div", {
@@ -87,7 +86,7 @@ export const DatePicker = styled(AntDatePicker, {
   "& .ant-picker-suffix": {
     display: "none",
   }
-})
+});
 
 export const SearchButton = styled("button", {
   height: 48,

@@ -1,8 +1,10 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+
 import { FiArrowRight, FiHeart, FiMapPin } from "react-icons/fi";
-import { formatAmount } from "../../../utils/formatAmount";
 import { Button } from "../Button";
+import { parseAmount } from "../../../utils/parseAmount";
+
 import { TicketCardContainer } from "./styles";
 
 type TicketCardProps = {
@@ -12,6 +14,7 @@ type TicketCardProps = {
   sellingPrice: number;
   imageUrl: string;
   className?: string;
+  onClick?: () => void;
 };
 
 export function TicketCard(props: TicketCardProps) {
@@ -43,15 +46,20 @@ export function TicketCard(props: TicketCardProps) {
 
         <div className="price">
           <span className="total-price">
-            de {formatAmount(props.totalPrice / 100)} por
+            de {parseAmount(props.totalPrice / 100)} por
           </span>
 
           <span className="selling-price">
             <span className="symbol">R$</span>
-            {formatAmount(props.sellingPrice / 100).slice(2)}
+            {parseAmount(props.sellingPrice / 100).slice(2)}
           </span>
 
-          <Button icon={<FiArrowRight />} type="primary" size="medium">
+          <Button
+            icon={<FiArrowRight />}
+            type="primary"
+            size="medium"
+            onClick={props.onClick && props.onClick}
+          >
             Saber mais
           </Button>
         </div>

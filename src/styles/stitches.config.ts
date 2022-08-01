@@ -20,6 +20,8 @@ export const {
       white: "#FFFFFF",
       black: "#0A2156",
 
+      background: "#F6F6F6",
+
       gray100: '#0B1F4D',
       gray90: '#24365E',
       gray80: '#3C4C70',
@@ -30,6 +32,7 @@ export const {
       gray30: '#B6BCC9',
       gray20: '#CED2DB',
       gray10: '#E7E9ED',
+
     },
     fonts: {
       circularStd: "'CircularStd', sans-serif",

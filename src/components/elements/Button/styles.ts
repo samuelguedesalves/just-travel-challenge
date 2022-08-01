@@ -1,9 +1,7 @@
-import {  } from '@stitches/react';
 import { styled } from "../../../styles/stitches.config";
 
 export const Button = styled("button", {
   fontFamily: "$circularStd",
-  // width: 100%;
   paddingInline: 20,
   border: "transparent",
 
@@ -53,10 +51,10 @@ export const Button = styled("button", {
     type: "primary",
     size: "medium",
   }
-})
+});
 
 const Styles = {
   Button,
-}
+};
 
 export default Styles;

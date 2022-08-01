@@ -18,7 +18,8 @@ type ButtonProps = {
   size: keyof typeof ButtonSize;
   children?: React.ReactNode;
   icon?: JSX.Element;
-  onClick?: () => {};
+  onClick?: () => void;
+  className?: string;
 };
 
 export function Button(props: ButtonProps) {
@@ -27,15 +28,14 @@ export function Button(props: ButtonProps) {
   }
 
   return (
-    <>
-      <Styles.Button
-        type={props.type}
-        size={props.size}
-        onClick={handleOnClick}
-      >
-        {props.children}
-        {props.icon && props.icon}
-      </Styles.Button>
-    </>
+    <Styles.Button
+      className={props.className && props.className}
+      type={props.type}
+      size={props.size}
+      onClick={handleOnClick}
+    >
+      {props.children}
+      {props.icon && props.icon}
+    </Styles.Button>
   );
 }

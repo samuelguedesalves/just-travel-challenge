@@ -52,4 +52,4 @@ export const LocalCheckboxLabel = styled("label", {
   defaultVariants: {
     type: "unchecked",
   }
-})
+});

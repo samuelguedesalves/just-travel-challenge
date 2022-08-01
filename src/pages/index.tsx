@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Head from "next/head";
 
-import { setTickets, Ticket } from "../services/redux/ticketSlice";
+import { setTickets } from "../services/redux/ticketSlice";
 import { useAppDispatch, useAppSelector } from "../services/redux/hooks";
 import { fetchTickets } from "../services/fetchTickets";
 
@@ -12,17 +12,25 @@ import { Suggestions } from "../components/modules/Suggestions";
 import { TicketList } from "../components/modules/TicketList";
 
 const Home: NextPage = () => {
+  const [shouldFetch, setShouldFetch] = useState<boolean>(true);
   const dispatch = useAppDispatch();
+  const tickets = useAppSelector((state) => state.tickets);
+
+  const getTickets = useCallback(async () => {
+    if (tickets.length == 0) {
+      const response = await fetchTickets();
+
+      dispatch(setTickets(response));
+
+      setShouldFetch(false);
+    }
+  }, [dispatch, tickets.length]);
 
   useEffect(() => {
-    async function getTickets() {
-      const tickets = await fetchTickets();
-
-      dispatch(setTickets(tickets));
+    if (shouldFetch) {
+      getTickets();
     }
-
-    getTickets();
-  }, []);
+  }, [getTickets, shouldFetch]);
 
   return (
     <div>

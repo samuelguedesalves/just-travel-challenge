@@ -32,7 +32,7 @@ export const ScoreItemLabel = styled("label", {
   defaultVariants: {
     type: "unchecked",
   }
-})
+});
 
 export const Fill = styled("div", {
   width: 189,

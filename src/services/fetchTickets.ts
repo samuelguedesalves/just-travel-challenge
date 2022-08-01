@@ -10,7 +10,19 @@ export async function fetchTickets() {
       return response.data;
     })
     .catch((error) => {
-      return error;
+      throw new Error(error);
+    });
+
+  return response;
+}
+
+export async function fetchTicket(ticketId: string) {
+  const response = await api.get(`/ticket/${ticketId}`)
+    .then((response) => {
+      return response.data;
+    })
+    .catch((error) => {
+      throw new Error(error);
     });
 
   return response;

@@ -13,10 +13,12 @@ export type Ticket = {
 
 type State = {
   tickets: Ticket[],
+  ticket: Ticket | null,
 }
 
 const initialState = {
-  tickets: []
+  tickets: [],
+  ticket: null,
 } as State;
 
 const ticketSlice = createSlice({
@@ -24,14 +26,19 @@ const ticketSlice = createSlice({
   initialState,
   reducers: {
     setTickets(state, action) {
-      // console.log(["rodando no reducer", state.tickets, action]);
-
       return {
+        ...state,
         tickets: action.payload,
       } as State;
     },
+    setTicket(state, action) {
+      return {
+        ...state,
+        ticket: action.payload,
+      } as State;
+    }
   },
 });
 
-export const { setTickets } = ticketSlice.actions;
+export const { setTickets, setTicket } = ticketSlice.actions;
 export default ticketSlice.reducer;
